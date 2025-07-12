@@ -10,36 +10,54 @@ class AppTextStyles extends ThemeExtension<AppTextStyles> {
   final TextStyle labelLarge;
   final TextStyle displayLarge;
 
+  final TextStyle appBarTitle;
+  final TextStyle bottomNavigationBarLabel;
+
+  static const fontFamily = "NewsReader";
+
   const AppTextStyles({
     this.headlineLarge = const TextStyle(
       fontSize: 24,
+      fontFamily: fontFamily,
       fontWeight: FontWeight.bold,
       color: Colors.white,
     ),
-    this.headlineSmall = const TextStyle(
-      fontSize: 16,
+    this.appBarTitle = const TextStyle(
+      fontSize: 18,
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.bold,
+      color: Colors.white,
     ),
+    this.bottomNavigationBarLabel = const TextStyle(
+      fontSize: 12,
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+    ),
+    this.headlineSmall = const TextStyle(fontSize: 16, fontFamily: fontFamily),
     this.bodyMedium = const TextStyle(
       fontSize: 24,
+      fontFamily: fontFamily,
       fontWeight: FontWeight.w500,
     ),
     this.bodySmall = const TextStyle(
       fontSize: 16,
+      fontFamily: fontFamily,
       fontWeight: FontWeight.normal,
     ),
     this.labelLarge = const TextStyle(
       fontSize: 16,
+      fontFamily: fontFamily,
       fontWeight: FontWeight.w500,
     ),
     this.labelMedium = const TextStyle(
       fontSize: 12,
+      fontFamily: fontFamily,
       fontWeight: FontWeight.w400,
     ),
-    this.labelSmall = const TextStyle(
-      fontSize: 8,
-    ),
+    this.labelSmall = const TextStyle(fontSize: 8, fontFamily: fontFamily),
     this.displayLarge = const TextStyle(
       fontSize: 20,
+      fontFamily: fontFamily,
       fontWeight: FontWeight.w700,
     ),
   });

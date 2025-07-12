@@ -5,6 +5,12 @@ class NewsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text("Noticias")));
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Noticias"),
+        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.search))],
+      ),
+      body: Center(child: Text("Noticias")),
+    );
   }
 }

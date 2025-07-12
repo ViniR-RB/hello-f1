@@ -6,11 +6,17 @@ ThemeData get blueTheme {
   final colors = AppColors.blue();
   const textStyles = AppTextStyles();
   return ThemeData(
+    fontFamily: AppTextStyles.fontFamily,
+
     colorSchemeSeed: colors.primary,
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: colors.bottomBarBackground,
       selectedIconTheme: IconThemeData(color: colors.bottomBarActive),
       unselectedIconTheme: IconThemeData(color: colors.bottomBarColor),
+    ),
+    appBarTheme: AppBarTheme(
+      centerTitle: true,
+      titleTextStyle: textStyles.appBarTitle.copyWith(color: colors.colorText),
     ),
     bottomAppBarTheme: BottomAppBarTheme(color: colors.bottomBarBackground),
     extensions: [colors, textStyles],
