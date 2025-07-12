@@ -1,4 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:hello_f1/app/modules/main/main_module.dart';
+import 'package:hello_f1/app/pages/splash_page.dart';
 
 class AppModule extends Module {
   @override
@@ -11,5 +13,8 @@ class AppModule extends Module {
   void exportedBinds(Injector i) {}
 
   @override
-  void routes(RouteManager r) {}
+  void routes(RouteManager r) {
+    r.child("/", child: (context) => const SplashPage());
+    r.module("/main", module: MainModule());
+  }
 }

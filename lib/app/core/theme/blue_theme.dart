@@ -7,24 +7,20 @@ ThemeData get blueTheme {
   const textStyles = AppTextStyles();
   return ThemeData(
     colorSchemeSeed: colors.primary,
-    bottomAppBarTheme: BottomAppBarTheme(
-      color: colors.bottomBarColor,
-      
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: colors.bottomBarBackground,
+      selectedIconTheme: IconThemeData(color: colors.bottomBarActive),
+      unselectedIconTheme: IconThemeData(color: colors.bottomBarColor),
     ),
+    bottomAppBarTheme: BottomAppBarTheme(color: colors.bottomBarBackground),
     extensions: [colors, textStyles],
-     textTheme: TextTheme(
-      headlineLarge: textStyles.headlineLarge.copyWith(
-        color: colors.colorText,
-      ),
-      headlineSmall: textStyles.headlineSmall.copyWith(
-        color: colors.colorText,
-      ),
+    textTheme: TextTheme(
+      headlineLarge: textStyles.headlineLarge.copyWith(color: colors.colorText),
+      headlineSmall: textStyles.headlineSmall.copyWith(color: colors.colorText),
       bodyMedium: textStyles.bodyMedium.copyWith(
         color: colors.colorTextSecondary,
       ),
-      bodySmall: textStyles.bodySmall.copyWith(
-        color: colors.colorText,
-      ),
+      bodySmall: textStyles.bodySmall.copyWith(color: colors.colorText),
       labelLarge: textStyles.labelLarge.copyWith(
         color: colors.colorTextSecondary,
       ),

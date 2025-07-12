@@ -6,10 +6,13 @@ import 'package:hello_f1/app/app_module.dart';
 import 'package:hello_f1/app/app_widget.dart';
 
 void main() {
-  runZonedGuarded(() {
-    runApp(ModularApp(module: AppModule(), child: const AppWidget()));
-  }, (error,stack) {
-    debugPrint('Erro: $error');
-    debugPrint('Stack: $stack');
-  });
+  runZonedGuarded(
+    () {
+      runApp(ModularApp(module: AppModule(), child: AppWidget()));
+    },
+    (error, stack) {
+      debugPrint('Erro: $error');
+      debugPrint('Stack: $stack');
+    },
+  );
 }

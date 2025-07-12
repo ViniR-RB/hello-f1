@@ -5,6 +5,7 @@ class AppColors extends ThemeExtension<AppColors> {
   final Color colorText;
   final Color colorTextSecondary;
   final Color cardColor;
+  final Color bottomBarBackground;
   final Color bottomBarColor;
   final Color bottomBarActive;
   final Color iconOutline;
@@ -15,6 +16,7 @@ class AppColors extends ThemeExtension<AppColors> {
     required this.colorText,
     required this.colorTextSecondary,
     required this.cardColor,
+    required this.bottomBarBackground,
     required this.bottomBarColor,
     required this.bottomBarActive,
     required this.iconOutline,
@@ -28,6 +30,7 @@ class AppColors extends ThemeExtension<AppColors> {
       colorText: const Color(0xFF0D141C),
       colorTextSecondary: const Color(0xFF4F7096),
       cardColor: const Color(0xFFE8EDF2),
+      bottomBarBackground: Color(0xFFF7FAFC),
       bottomBarColor: const Color(0xFF4F7096),
       bottomBarActive: primary,
       iconOutline: const Color(0xFF0D141C),
@@ -41,6 +44,7 @@ class AppColors extends ThemeExtension<AppColors> {
     Color? colorText,
     Color? colorTextSecondary,
     Color? cardColor,
+    Color? bottomBarBackground,
     Color? bottomBarColor,
     Color? bottomBarActive,
     Color? iconOutline,
@@ -51,6 +55,7 @@ class AppColors extends ThemeExtension<AppColors> {
       colorText: colorText ?? this.colorText,
       colorTextSecondary: colorTextSecondary ?? this.colorTextSecondary,
       cardColor: cardColor ?? this.cardColor,
+      bottomBarBackground: bottomBarBackground ?? this.bottomBarBackground,
       bottomBarColor: bottomBarColor ?? this.bottomBarColor,
       bottomBarActive: bottomBarActive ?? this.bottomBarActive,
       iconOutline: iconOutline ?? this.iconOutline,
@@ -75,6 +80,11 @@ class AppColors extends ThemeExtension<AppColors> {
         t,
       )!,
       cardColor: Color.lerp(cardColor, other.cardColor, t)!,
+      bottomBarBackground: Color.lerp(
+        bottomBarBackground,
+        other.bottomBarBackground,
+        t,
+      )!,
       bottomBarColor: Color.lerp(bottomBarColor, other.bottomBarColor, t)!,
       bottomBarActive: Color.lerp(bottomBarActive, other.bottomBarActive, t)!,
       iconOutline: Color.lerp(iconOutline, other.iconOutline, t)!,
