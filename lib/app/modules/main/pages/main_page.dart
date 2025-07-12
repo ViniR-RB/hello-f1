@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:hello_f1/app/core/theme/theme.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -61,6 +62,7 @@ class _MainPageState extends State<MainPage> {
           currentIndex: currentIndex,
           onTap: _onItemTapped,
           type: BottomNavigationBarType.fixed,
+
           selectedItemColor: Theme.of(
             context,
           ).bottomNavigationBarTheme.selectedItemColor,
@@ -70,9 +72,12 @@ class _MainPageState extends State<MainPage> {
           backgroundColor: Theme.of(
             context,
           ).bottomNavigationBarTheme.backgroundColor,
-          selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
-          unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.normal),
-          elevation: 8,
+          selectedLabelStyle: Theme.of(
+            context,
+          ).textStyles.bottomNavigationBarLabel,
+          unselectedLabelStyle: Theme.of(
+            context,
+          ).textStyles.bottomNavigationBarLabel,
         );
       },
     );

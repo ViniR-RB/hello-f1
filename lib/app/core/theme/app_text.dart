@@ -35,9 +35,9 @@ class AppTextStyles extends ThemeExtension<AppTextStyles> {
     ),
     this.headlineSmall = const TextStyle(fontSize: 16, fontFamily: fontFamily),
     this.bodyMedium = const TextStyle(
-      fontSize: 24,
+      fontSize: 16,
       fontFamily: fontFamily,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w700,
     ),
     this.bodySmall = const TextStyle(
       fontSize: 16,
@@ -47,16 +47,16 @@ class AppTextStyles extends ThemeExtension<AppTextStyles> {
     this.labelLarge = const TextStyle(
       fontSize: 16,
       fontFamily: fontFamily,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w700,
     ),
     this.labelMedium = const TextStyle(
-      fontSize: 12,
+      fontSize: 14,
       fontFamily: fontFamily,
-      fontWeight: FontWeight.w400,
+      fontWeight: FontWeight.w500,
     ),
     this.labelSmall = const TextStyle(fontSize: 8, fontFamily: fontFamily),
     this.displayLarge = const TextStyle(
-      fontSize: 20,
+      fontSize: 22,
       fontFamily: fontFamily,
       fontWeight: FontWeight.w700,
     ),
